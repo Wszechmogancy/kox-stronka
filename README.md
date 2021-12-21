@@ -1,2 +1,2 @@
 # kox-stronka
-stronka 
+stonka + php
