@@ -1,7 +1,7 @@
 body {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     min-height: 100vh;
     font-family: arial, sans-serif;
 }
@@ -10,6 +10,9 @@ input, textarea {
     width: 300px;
     font-size: 18px;
     margin: 7px 0px;
+}
+form{
+    top: 1px;
 }
 label {
     display: block;

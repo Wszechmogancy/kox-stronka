@@ -8,7 +8,7 @@ if (isset($_POST['name']) && isset($_POST['message'])) {
 	    $data = htmlspecialchars($data);
 	    return $data;
 	}
-
+$godzina = date("Y-m-d H:i:s");
 	$name = validate($_POST['name']);
 	$message = validate($_POST['message']);
 
@@ -16,20 +16,20 @@ if (isset($_POST['name']) && isset($_POST['message'])) {
 		header("Location: index.html");
 	}else {
 
-		$sql = "INSERT INTO `test`(`imie`, `wiad`) VALUES ('$name', '$message')";
+		$sql = "INSERT INTO `wpisy`(`id`,`godzina`,`imie`, `wiad`) VALUES (null,'$godzina','$name', '$message')";
 		$res = mysqli_query($conn, $sql);
 
 		if ($res) {
 			echo ("twoj awiadomość została wysłana pomyślnie");
-            echo '<script src="script.js"></script>';
+            header("Location: index.php");
 		}else {
 			echo ("twoja wiadomość nie mogła byc wysłana");
 		}
 	}
 
 }else {
-	header("Location: index.html");
+	header("Location: index.php");
 }
-sleep(5);
-header("location: select.php")
+// sleep(5);
+// header("location: select.php")
 ?>
