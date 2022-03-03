@@ -4,7 +4,7 @@ $sname = "localhost";
 $uname = "root";
 $password = "";
 
-$db_name = "szkoła";
+$db_name = "tak";
 
 $conn = mysqli_connect($sname, $uname, $password, $db_name);
 if (!$conn) {
