@@ -21,6 +21,7 @@ if (isset($_POST['name']) && isset($_POST['message'])) {
 
 		if ($res) {
 			echo ("twoj awiadomość została wysłana pomyślnie");
+            echo '<script src="script.js"></script>';
 		}else {
 			echo ("twoja wiadomość nie mogła byc wysłana");
 		}
@@ -29,4 +30,6 @@ if (isset($_POST['name']) && isset($_POST['message'])) {
 }else {
 	header("Location: index.html");
 }
+sleep(5);
+header("location: select.php")
 ?>
